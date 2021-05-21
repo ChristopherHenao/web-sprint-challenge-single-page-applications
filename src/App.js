@@ -10,7 +10,8 @@ import axios from 'axios';
 const GeneralStyles = Styled.div`
     text-align: center;
 `
-const initialOrders = [{
+const initialOrders = [
+  {
   name: "Test Order",
   size: "large",
   topping1: true,
@@ -18,7 +19,8 @@ const initialOrders = [{
   topping3: true,
   topping4: false,
   special: "Please work",
-} ]
+} 
+]
 
 const initialValue = {
   name: "",

@@ -14,7 +14,7 @@ const Orders = (props) => {
             <p>Chicken: {order.topping2.checked}</p>
             <p>Onion: {order.topping3.checked}</p>
             <p>Peppers: {order.topping4.checked}</p>
-            <p>Special Instructins: {order.special}</p>
+            <p>Special Instructions: {order.special}</p>
         </div>
     )
 }
