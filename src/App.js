@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <h1>Lambda Eats</h1>
-      <Link to="/"><button>Home</button></Link>
+      <Link to="/"><button id="order-pizza">Home</button></Link>
       <Link to="/pizza"><button>Order Pizza</button></Link>
 
 
