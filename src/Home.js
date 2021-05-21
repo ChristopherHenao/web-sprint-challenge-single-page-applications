@@ -4,7 +4,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div id="home-page">
             <h2>Click order pizza to begin your order!</h2>
         </div>
     )
