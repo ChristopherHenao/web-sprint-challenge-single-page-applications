@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
         <div>
-            Home Page
+            <h2>Click order pizza to begin your order!</h2>
         </div>
     )
 }

@@ -1,15 +1,12 @@
 import React from "react";
-import Styled from 'styled-components';
 
 
-const StyledForm = Styled.div`
-    text-align: center;
-`
+
 
 const Form = () => {
 
     return (
-        <StyledForm  id="pizza-form">
+        <div id="pizza-form">
             <form>
                 <input 
                 id="name-input" 
@@ -47,7 +44,7 @@ const Form = () => {
 
                 <button id="order-button">Add to Order</button>
             </form>
-        </StyledForm>
+        </div>
     )
 }
 
