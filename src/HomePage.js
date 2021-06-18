@@ -3,8 +3,10 @@ import { useHistory } from 'react-router-dom'
 
 const HomePage = () => {
 
+    // Created a variable to use in the routeToForm below
     const history = useHistory()
 
+    // Created a function to get to the Form page
     const routeToForm = () => {
         history.push('/pizza')
     }

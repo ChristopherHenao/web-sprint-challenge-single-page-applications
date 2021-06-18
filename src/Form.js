@@ -1,9 +1,30 @@
 import React from "react"
+import Styled from 'styled-components'
+
+
+
 
 const Form = () => {
 
+
+    const StyledForm = Styled.div`
+        border: 2px solid black;
+        width: 40%;
+        margin: 2% auto 2% auto;
+        padding: 2%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        input {
+            margin: 1.5%;
+        }
+    `
+
     return (
-        <div>
+        <StyledForm>
+            <h2>Customize Your Order!</h2>
             <form id='pizza-form'>
                 <label>Name: </label>
                     <input 
@@ -43,24 +64,25 @@ const Form = () => {
                         name='ham-topping3'
                         type='checkbox'
                         value='ham'
-                        />      
+                        />
 
                     <label> Pineapple </label>
                         <input 
                         name='pineapple-topping1'
                         type='checkbox'
                         value='pineapple'
-                        />
-                <br/>
+                        /><br/>
 
                 <label>Special Instructions: </label>
                     <input 
                     id='special-text'
                     name='specialInstructions'
                     type='text'
-                    />
+                    /><br/>
+
+                <button>Add to Order</button>
             </form>
-        </div>
+        </StyledForm>
     )
 }
 
