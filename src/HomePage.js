@@ -13,10 +13,8 @@ const HomePage = () => {
 
     return (
         <div>
-            <div>
-                {/* img is set here */}
-            </div>
-            <img src='../Assets/Pizza.jpg' alt='pizza on a dish'/><br/>
+           
+            <p>Click below to order!</p>
             <button id='order-pizza' onClick={routeToForm}>Pizza?</button>
         </div>
     )
