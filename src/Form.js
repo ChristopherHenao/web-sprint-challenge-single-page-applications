@@ -4,7 +4,10 @@ import Styled from 'styled-components'
 
 
 
-const Form = () => {
+const Form = (props) => {
+
+    // Props passed to Form 
+    const { values, change, submit } = props
 
     // This is the styling for the Form
     const StyledForm = Styled.div`
@@ -23,19 +26,24 @@ const Form = () => {
         input {
             margin: 1.5%;
         }
-
     `
+
+const onSubmit = evt => {
+    evt.preventDefault()
+    submit()
+  } 
 
     return (
         <StyledForm>
             <h2>Build Your Own Pizza</h2>
-            <form id='pizza-form'>
+            <form id='pizza-form' onSubmit={onSubmit}>
                 <label>Name: </label>
                     {/* Name Input */}
                     <input 
                     id='name-input'
                     name='name'
                     type='text'
+                    onChange={change}
                     /><br/>
                 
                 <label>Pizza Size: </label>
@@ -43,6 +51,7 @@ const Form = () => {
                     <select 
                     name='size'
                     id='size-dropdown'
+                    onChange={change}
                     >
                         <option value=''>-Select a size-</option>
                         <option value='medium'>Medium</option>
@@ -57,6 +66,7 @@ const Form = () => {
                         name='pepperoniTopping1'
                         type='checkbox'
                         value='pepperoni'
+                        onChange={change}
                         />
 
                     <label> Chicken </label>
@@ -64,6 +74,7 @@ const Form = () => {
                         name='chickenTopping2'
                         type='checkbox'
                         value='chicken'
+                        onChange={change}
                         />
 
                     <label> Ham </label>
@@ -71,6 +82,7 @@ const Form = () => {
                         name='hamTopping3'
                         type='checkbox'
                         value='ham'
+                        onChange={change}
                         />
 
                     <label> Pineapple </label>
@@ -78,6 +90,7 @@ const Form = () => {
                         name='pineappleTopping4'
                         type='checkbox'
                         value='pineapple'
+                        onChange={change}
                         /><br/>
 
                 <label>Special Instructions: </label>
@@ -86,6 +99,7 @@ const Form = () => {
                     id='special-text'
                     name='specialInstructions'
                     type='text'
+                    onChange={change}
                     /><br/>
 
                 {/* Submit Button */}
